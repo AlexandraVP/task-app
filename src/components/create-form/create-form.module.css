@@ -1,0 +1,78 @@
+.square {
+    background-color: rgba(255,255,255,0.7);
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+
+.header{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.body {
+    display: flex;
+    position: relative;
+    padding: 20px 30px;
+}
+
+.error{
+    position: absolute;
+    bottom: 0px;
+    left: 35px;
+    color: #ff2e2e;
+}
+
+.footer{
+    display: flex;
+    padding: 10px 30px 20px;
+}
+
+.modalSquare {
+    background-color: white;
+    width: 500px;
+    box-shadow: 0 1px 2px 0 rgba(0,0,0,.18), 0 1px 2px 0 rgba(0,0,0,.04), 0 2px 6px 0 rgba(0,0,0,.04);
+    position: fixed;
+    top: 300px;
+    left: calc(50% - 250px);
+}
+
+.descriptionSquare {
+    color: #808080;
+}
+
+.closeSquare {
+    cursor: pointer;
+    color: red;
+    border: 1px solid red;
+    padding: 4px 6px 4px 6px;
+}
+
+.closeSquare:hover {
+    background: red;
+    color: white;
+    cursor: pointer;
+}
+
+.input{
+    width: 400px;
+    background-color: #f2f2f2;
+    color: #000;
+    font-size: 25px;
+    line-height: 30px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #f2f2f2;
+}
+
+.creationTask {
+    border: 1px solid #f2f2f2;
+    padding: 5px 20px;
+    user-select: none;
+    cursor: pointer;
+}

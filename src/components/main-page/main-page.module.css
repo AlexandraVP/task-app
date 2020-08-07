@@ -1,0 +1,93 @@
+.page {
+    display: flex;
+    justify-content: center;
+}
+
+.layout {
+    background-color: white;
+    max-width: 992px;
+    width: 100%;
+    height: 100vh;
+    margin: 0px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 0px;
+    height: 70px;
+}
+
+.listTask {
+    font-size: 27px;
+    align-self: center;
+}
+
+
+.main {
+    margin: 15px;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    border: 1px solid #f2f2f2;
+    justify-content: space-between;
+    padding: 0px 10px 0px 10px;
+}
+
+.tasNumber {
+    align-self: center;
+    border-right: 1px solid #f2f2f2;
+}
+
+.taskDescription {
+    align-self: center;
+    border-right: 1px solid #f2f2f2;
+    border-left: 1px solid #f2f2f2;
+    width: 790px;
+    height: 100%;
+    padding: 0px 10px 0px 10px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding: 0px 10px 0px 10px;
+
+}
+
+.edit {
+    border: 1px solid #62a60a;
+    color: #62a60a;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    text-align: center;
+    padding-top: 5px;
+
+}
+
+.edit:hover {
+    background: #62a60a;
+    color: white;
+    cursor: pointer;
+}
+
+.delete {
+    border: 1px solid #ff1b00;
+    color: #ff1b00;
+    border-radius: 5px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.delete:hover {
+    background: #ff1b00;
+    color: white;
+    cursor: pointer;
+}

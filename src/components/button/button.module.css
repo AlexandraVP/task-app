@@ -1,0 +1,41 @@
+
+.button {
+    padding: 5px 20px;
+    border-radius: 2px;
+    color: black;
+    cursor: pointer;
+    user-select: none;
+}
+
+.button:hover,
+.button:focus{
+    color: white;
+}
+
+.primary {
+    border: 1px solid #39b54a;
+}
+
+.button.primary:hover,
+.button.primary:focus{
+    background-color: #39b54a;
+}
+
+.secondary {
+    border: 1px solid #0271bd;
+}
+
+.button.secondary:hover,
+.button.secondary:focus{
+    background-color: #0271bd;
+}
+
+
+.danger {
+    border: 1px solid #ff0102;
+}
+
+.button.danger:hover,
+.button.danger:focus{
+    background-color: #ff0102;
+}
