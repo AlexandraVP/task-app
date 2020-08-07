@@ -12,12 +12,22 @@
 }
 
 .root{
-    padding: 20px;
+    padding: 20px 20px 30px;
+    position: relative;
 }
 
 .btnContainer{
     width: 200px;
+    position: relative;
 }
+
+.error{
+    position: absolute;
+    bottom: 0px;
+    left: 23px;
+    color: #ff2e2e;
+}
+
 
 .header {
     font-weight: bold;

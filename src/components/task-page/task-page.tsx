@@ -18,13 +18,17 @@ type ReduxProps = ConnectedProps<typeof connector>
 type Props = RouterProps & ReduxProps;
 
 type State = {
-    text: string | null
+    text: string | null,
+    edited: boolean,
+    error: string | null
 }
 
 class TaskPage extends Component<Props, State> {
 
     state = {
-        text: null
+        text: '',
+        edited: false,
+        error: null
     };
 
 
@@ -34,17 +38,25 @@ class TaskPage extends Component<Props, State> {
 
     updateText = (event: React.ChangeEvent<HTMLInputElement>) => {
         this.setState({
-            text: event.target.value
+            text: event.target.value,
+            edited: true
         });
     };
 
     applyChanges = () => {
         const {task} = this.props;
-        if (!task) {
+        if (!task || !this.state.edited) {
             return;
         }
-        const text = (this.state.text || task.title).trim();
-        this.props.editTask(task.id, text);
+        const text = this.state.text.trim();
+        if(!text){
+            this.setState({
+                error: 'Заголовок не может быть пустым'
+            });
+        }else{
+            this.props.editTask(task.id, text);
+        }
+
     };
 
     componentDidUpdate(prevProps: Readonly<Props>, prevState: Readonly<State>, snapshot?: any): void {
@@ -58,7 +70,7 @@ class TaskPage extends Component<Props, State> {
         if (!task) {
             return null;
         }
-        const text = this.state.text || task.title;
+        const text = this.state.edited ? this.state.text : task.title;
         return (
             <div className={style.page}>
                 <div className={style.layout}>
@@ -69,6 +81,11 @@ class TaskPage extends Component<Props, State> {
                         <div className={style.btnContainer}>
                             <Button buttonType='secondary' onClick={this.applyChanges}>Вернуться к списку</Button>
                         </div>
+                        {this.state.error && (
+                            <div className={style.error}>
+                                {this.state.error}
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>);
