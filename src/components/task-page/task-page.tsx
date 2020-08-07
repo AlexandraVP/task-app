@@ -46,6 +46,7 @@ class TaskPage extends Component<Props, State> {
     applyChanges = () => {
         const {task} = this.props;
         if (!task || !this.state.edited) {
+            this.props.history.push('/');
             return;
         }
         const text = this.state.text.trim();
